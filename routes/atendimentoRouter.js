@@ -12,10 +12,16 @@ router.post("/atendimentos", (req, res) => {
 })
 
 // /:id serve como parâmetro
-router.put("/atendimento/:id", (req, res) => {
+router.put("/atendimentos/:id", (req, res) => {
+    // const id = req.params.id
+    const { id } = req.params
     res.send(`Atualizando o atendimento de index ${id}`)
 })
 
-router.delete("/atendimento/:id", (req, res) => {
+router.delete("/atendimentos/:id", (req, res) => {
+    const { id } = req.params
     res.send(`Deletando atendimento de index ${id}`)
 })
+
+// ES Modules
+export default router
